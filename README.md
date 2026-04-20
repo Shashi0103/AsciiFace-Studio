@@ -1,16 +1,74 @@
-# React + Vite
+# 🌌 AsciiFace Studio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### **The Premium Digital Art Workstation**
 
-Currently, two official plugins are available:
+**AsciiFace Studio** is a high-fidelity, immersive creative workstation designed to transform live video and local photos into stunning ASCII and Pixel art. Built with a signature **"Obsidian"** aesthetic, it combines pro-level image processing with an ultra-responsive, gesture-driven interface.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 🚀 Key Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+*   **Dual Rendering Engines**: Seamlessly switch between **Classic ASCII Typography** and **Retro Pixel Art** modes in real-time.
+*   **Aesthetic Effects Library**: Ignite your creations with cinematic filters including **Matrix Glitch**, **Analog Scanlines**, **Digital Noise**, and more.
+*   **Pro Image Controls**: Fine-tune your source media with high-precision sliders for Brightness, Contrast, Saturation, Gamma, and Edge Detection.
+*   **Universal Media Source**: Process your **Live Camera Feed** or upload local **JPG/PNG Photos** for instant transformation.
+*   **Multi-Format Pose Capture**: Snap high-resolution captures and export them as **PNG Image**, **Infinitely Scalable SVG**, or **Raw ASCII Text**.
+*   **Obsidian UI Engine**: A zero-latency, hardware-accelerated interface featuring a 3-drawer navigation system and glassmorphic controls.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Tech Stack
+
+- **Framework**: [React](https://reactjs.org/) (Vite-powered)
+- **Animation**: [Framer Motion](https://www.framer.com/motion/)
+- **State Management**: [Zustand](https://github.com/pmndrs/zustand)
+- **Styling**: Vanilla CSS with Modern Glassmorphism
+- **Icons**: [Lucide React](https://lucide.dev/)
+
+---
+
+## ⚡ Quick Start
+
+### 1. Installation
+Clone the repository and install the dependencies:
+```bash
+git clone https://github.com/Shashi0103/AsciiFace-Studio.git
+cd AsciiFace-Studio
+npm install
+```
+
+### 2. Development
+Launch the high-performance development server:
+```bash
+npm run dev
+```
+
+### 3. Production
+Build the optimized production bundle:
+```bash
+npm run build
+```
+
+---
+
+## ⌨️ Keyboard Shortcuts
+
+| Key | Action |
+| --- | --- |
+| `A` | Switch to ASCII Mode |
+| `P` | Switch to Pixel Mode |
+| `[` | Toggle Features Sidebar |
+| `]` | Toggle Export Sidebar |
+| `+` / `-` | Zoom Control |
+| `R` | Reset All Controls |
+| `Ctrl + D` | Quick Download PNG |
+
+---
+
+## 🎨 Aesthetic Manifesto
+
+AsciiFace Studio isn't just a tool; it's an atmosphere. Every interaction is designed to feel tactile and premium, ensuring that the technology stays behind the art. No placeholders, no generic styles—just pure, obsidian-grade creativity.
+
+---
+
+*Crafted by Shashi0103*
