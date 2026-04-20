@@ -7,14 +7,14 @@ import { useAppStore } from '../../store/useAppStore';
 import { useState } from 'react';
 
 export default function Header({ onShowShortcuts }) {
-  const { exitStudio } = useAppStore();
+  const { exitStudio, useLiveCamera } = useAppStore();
 
   return (
     <header style={{
       gridRow: '1',
-      display: 'flex',
+      display: 'grid',
+      gridTemplateColumns: '1fr auto 1fr',
       alignItems: 'center',
-      justifyContent: 'space-between',
       padding: '0 20px',
       borderBottom: '1px solid var(--border-dim)',
       background: 'var(--bg-surface)',
@@ -41,7 +41,8 @@ export default function Header({ onShowShortcuts }) {
           border: '1px solid rgba(0, 255, 65, 0.25)',
           borderRadius: '12px',
           transition: 'all 0.3s ease',
-          boxShadow: '0 4px 15px rgba(0,0,0,0.2)'
+          boxShadow: '0 4px 15px rgba(0,0,0,0.2)',
+          justifySelf: 'start'
         }}
         title="Return to Landing Page"
       >
@@ -61,13 +62,33 @@ export default function Header({ onShowShortcuts }) {
         </div>
       </motion.div>
 
-      {/* Center status removed for minimalism */}
+      {/* Center status badge (Grid Centered) */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={{ opacity: 1, scale: 1 }}
+        style={{ 
+          display: 'flex', alignItems: 'center', gap: 8,
+          fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.1em',
+          color: useLiveCamera ? 'var(--neon-green)' : 'var(--neon-cyan)',
+          padding: '6px 14px', borderRadius: '100px',
+          background: useLiveCamera ? 'rgba(0,255,65,0.05)' : 'rgba(0,210,255,0.05)',
+          border: useLiveCamera ? '1px solid rgba(0,255,65,0.15)' : '1px solid rgba(0,210,255,0.15)',
+          pointerEvents: 'none',
+          whiteSpace: 'nowrap'
+        }}
+      >
+        <div className="pulse-dot" style={{ 
+          background: useLiveCamera ? 'var(--neon-green)' : 'var(--neon-cyan)',
+          boxShadow: useLiveCamera ? '0 0 8px var(--neon-green)' : '0 0 8px var(--neon-cyan)'
+        }} />
+        {useLiveCamera ? 'LIVE STREAM ACTIVE' : 'MEDIA SOURCE: IMAGE'}
+      </motion.div>
 
       {/* Right controls */}
       <motion.div
         initial={{ opacity: 0, x: 20 }}
         animate={{ opacity: 1, x: 0 }}
-        style={{ display: 'flex', alignItems: 'center', gap: 12 }}
+        style={{ display: 'flex', alignItems: 'center', gap: 12, justifySelf: 'end' }}
       >
         <span style={{ fontFamily: 'var(--font-mono)', fontSize: 10, color: 'var(--text-dim)' }}>
           <Zap size={10} style={{ display: 'inline', marginRight: 3 }} />

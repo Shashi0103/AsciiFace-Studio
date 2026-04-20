@@ -72,18 +72,6 @@ const AsciiOutput = forwardRef(function AsciiOutput({ videoRef: extVideoRef }, r
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
     >
-      {/* Floating Status Badge */}
-      <div style={{ 
-        position: 'fixed', top: 80, left: '50%', transform: 'translateX(-50%)',
-        fontFamily: 'var(--font-mono)', fontSize: 10, color: useLiveCamera ? 'var(--neon-green)' : 'var(--neon-cyan)', 
-        display: 'flex', alignItems: 'center', gap: 6,
-        background: useLiveCamera ? 'rgba(0,255,65,0.08)' : 'rgba(0,210,255,0.08)', padding: '5px 12px', borderRadius: 100,
-        border: useLiveCamera ? '1px solid rgba(0,255,65,0.2)' : '1px solid rgba(0,210,255,0.2)', backdropFilter: 'blur(8px)',
-        zIndex: 50, letterSpacing: '0.1em', pointerEvents: 'none'
-      }}>
-        <div className="pulse-dot" style={{ background: useLiveCamera ? 'var(--neon-green)' : 'var(--neon-cyan)', boxShadow: useLiveCamera ? '0 0 10px var(--neon-green)' : '0 0 10px var(--neon-cyan)' }} />
-        {useLiveCamera ? 'LIVE STREAM ACTIVE' : 'MEDIA SOURCE: IMAGE'}
-      </div>
 
       {/* Rendering indicator */}
       {isRendering && (
